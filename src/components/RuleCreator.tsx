@@ -10,20 +10,27 @@ const RuleCreator: React.FC = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await fetch('/api/rules', {
+      const response = await fetch('http://localhost:5001/api/rules', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, expression }),
       });
-      if (response.ok) {
-        setName('');
-        setExpression('');
-        alert('Rule created successfully!');
-      } else {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to create rule');
+
+      if (!response.ok) {
+        let errorMessage = 'Failed to create rule';
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.message || errorMessage;
+        } catch (jsonError) {
+          console.error('Error parsing error response:', jsonError);
+        }
+        throw new Error(errorMessage);
       }
-    } catch (error) {
+
+      setName('');
+      setExpression('');
+      alert('Rule created successfully!');
+    } catch (error: any) {
       console.error('Error creating rule:', error);
       setError(error.message || 'Failed to create rule. Please try again.');
     }
@@ -54,11 +61,9 @@ const RuleCreator: React.FC = () => {
             id="expression"
             value={expression}
             onChange={(e) => setExpression(e.target.value)}
-            rows={6}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             required
-            placeholder="e.g., ((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
-          ></textarea>
+          />
         </div>
         {error && <p className="text-red-500 text-sm">{error}</p>}
         <button

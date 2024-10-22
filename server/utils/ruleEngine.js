@@ -15,12 +15,10 @@ function validateAttributes(expression) {
 
 export function createRule(ruleString) {
   try {
-    validateAttributes(ruleString); // Ensure rule uses valid attributes
-
-    // Clean and format the rule string
+    // Clean and format the rule string (remove extra whitespace)
     const cleanedString = ruleString.replace(/\s+/g, ' ').trim();
 
-    // Convert to a valid JavaScript expression
+    // Convert user-friendly logical operators to JavaScript equivalents
     const jsExpression = cleanedString
       .replace(/AND/g, '&&')
       .replace(/OR/g, '||')
@@ -40,21 +38,38 @@ export function createRule(ruleString) {
   }
 }
 
+
 export function combineRules(rules) {
   if (rules.length === 0) return null;
   if (rules.length === 1) return rules[0];
 
   // Combine multiple rules into a logical AND expression
-  return {
+  return rules.reduce((combined, rule) => ({
     type: 'LogicalExpression',
     operator: '&&',
-    left: rules[0],
-    right: combineRules(rules.slice(1)),
-  };
+    left: combined,
+    right: rule
+  }));
 }
 
 export function evaluateRule(ast, data) {
+  if (!ast || typeof ast !== 'object') {
+    throw new Error('Invalid AST provided');
+  }
+
   function evaluate(node) {
+    if (!node || typeof node !== 'object') {
+      throw new Error('Invalid node in AST');
+    }
+
+    // Handle nested Program and ExpressionStatement nodes
+    if (node.type === 'Program' && node.body.length > 0) {
+      return evaluate(node.body[0]);
+    }
+    if (node.type === 'ExpressionStatement') {
+      return evaluate(node.expression);
+    }
+
     switch (node.type) {
       case 'BinaryExpression':
         const left = evaluate(node.left);
@@ -82,7 +97,7 @@ export function evaluateRule(ast, data) {
       case 'Literal':
         return node.value;
       default:
-        console.error('Unsupported node type:', node); // Log for debugging
+        console.error('Unsupported node type:', JSON.stringify(node, null, 2));
         throw new Error(`Unsupported node type: ${node.type}`);
     }
   }

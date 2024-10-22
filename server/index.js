@@ -1,12 +1,14 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import cors from 'cors'; // Import the cors middleware
 import ruleRoutes from './routes/ruleRoutes.js'; // Adjust if your routes file is named differently
 
 const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
+app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json());
 
 // Connect to MongoDB
