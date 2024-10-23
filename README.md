@@ -1,8 +1,6 @@
 # RuleCraft: Advanced Rule Engine with AST
 
-A flexible rule engine that utilizes Abstract Syntax Trees (AST) to evaluate user eligibility based on attributes like age, department, and income. Built with a modern 3-tier architecture, RuleCraft enables efficient creation, combination, and evaluation of complex business rules.
-
-![RuleCraft Dashboard](https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop&q=60)
+RuleCraft is a flexible rule engine designed to evaluate user eligibility based on various attributes such as age, department, and income. Utilizing Abstract Syntax Trees (AST), this application supports a modern 3-tier architecture that enables efficient creation, combination, and evaluation of complex business rules.
 
 ## Table of Contents
 
@@ -195,14 +193,7 @@ function App() {
    ```bash
    npm install
    ```
-
-3. Configure environment variables:
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
-
-4. Start the development server:
+3. Start the development server:
    ```bash
    npm run dev
    ```
