@@ -214,11 +214,13 @@ function App() {
    ```bash
    node server/index.js
    ```
-3. Start the Frontend Development Server:
+4. Start the Frontend Development Server:
    ```bash
    npm run dev
-   ```   
-   
+   ```
+5 Open or Click on the link: `http://127.0.0.1:5173/`
+   <div align="center"> <img src="https://github.com/user-attachments/assets/888daa00-15d2-4655-a4e3-b0dfab28609d" alt="Screenshot of the application" width="600" /> </div>
+
 
 ## 🔌 API Endpoints
 
