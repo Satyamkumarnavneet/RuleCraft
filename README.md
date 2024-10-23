@@ -290,4 +290,3 @@ For support, email support@rulecraft.com or join our [Discord community](https:/
 ---
 
 Built with ❤️ by the RuleCraft Team
->>>>>>> 13457864b7333874a0e2016932cd69c8e5980597
