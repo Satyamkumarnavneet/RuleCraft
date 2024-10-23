@@ -19,7 +19,7 @@ const RuleEvaluator: React.FC = () => {
 
   const fetchRules = async () => {
     try {
-      const response = await fetch('/api/rules');
+      const response = await fetch('http://localhost:5001/api/rules');
       const data = await response.json();
       setRules(data);
     } catch (error) {
@@ -31,12 +31,22 @@ const RuleEvaluator: React.FC = () => {
     e.preventDefault();
     setError('');
     setResult(null);
+  
     try {
-      const response = await fetch('/api/evaluate', {
+      // Validate JSON input
+      let parsedUserData;
+      try {
+        parsedUserData = JSON.parse(userData);
+      } catch (parseError) {
+        throw new Error('Invalid JSON format. Please check your input.');
+      }
+  
+      const response = await fetch('http://localhost:5001/api/evaluate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ruleId: selectedRule, userData: JSON.parse(userData) }),
+        body: JSON.stringify({ ruleId: selectedRule, userData: parsedUserData }),
       });
+  
       if (response.ok) {
         const data = await response.json();
         setResult(data.result);
@@ -49,6 +59,7 @@ const RuleEvaluator: React.FC = () => {
       setError(error.message || 'Failed to evaluate rule. Please check your input and try again.');
     }
   };
+  
 
   return (
     <div className="bg-white shadow-md rounded-lg overflow-hidden">

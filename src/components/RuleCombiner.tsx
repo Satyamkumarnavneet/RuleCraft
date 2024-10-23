@@ -18,7 +18,7 @@ const RuleCombiner: React.FC = () => {
 
   const fetchRules = async () => {
     try {
-      const response = await fetch('/api/rules');
+      const response = await fetch('http://localhost:5001/api/rules');
       const data = await response.json();
       setRules(data);
     } catch (error) {
@@ -30,7 +30,7 @@ const RuleCombiner: React.FC = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await fetch('/api/combine-rules', {
+      const response = await fetch('http://localhost:5001/api/combine-rules', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ruleIds: selectedRules, name: combinedRuleName }),

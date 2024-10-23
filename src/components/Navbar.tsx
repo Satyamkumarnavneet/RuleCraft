@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <Home className="h-8 w-8" />
-            <span className="font-bold text-xl">Rule Engine</span>
+            <span className="font-bold text-xl">RuleCraft</span>
           </Link>
           <div className="flex space-x-4">
             <Link to="/rules" className="flex items-center space-x-1 hover:text-blue-200">
