@@ -11,8 +11,6 @@ RuleCraft is a flexible rule engine designed to evaluate user eligibility based 
 - [Getting Started](#-getting-started)
 - [API Endpoints](#-api-endpoints)
 - [Data Structures](#-data-structures)
-- [Advanced Features](#-advanced-features)
-- [Security](#-security)
 - [Testing](#-testing)
 - [Performance](#-performance)
 - [Contributing](#-contributing)
@@ -203,7 +201,7 @@ function App() {
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/rulecraft.git
+   git clone https://github.com/Satyamkumarnavneet/rulecraft.git
    cd rulecraft
    ```
 
@@ -211,10 +209,15 @@ function App() {
    ```bash
    npm install
    ```
-3. Start the development server:
+3. Start the Backend Server:
+   ```bash
+   node server/index.js
+   ```
+3. Start the Frontend Development Server:
    ```bash
    npm run dev
-   ```
+   ```   
+   
 
 ## 🔌 API Endpoints
 
@@ -248,7 +251,7 @@ Body: {
 // Combine rules
 POST /api/combine-rules
 Body: {
-  "ruleIds": ["rule1", "rule2"],
+  "ruleIds": ["rule1ID", "rule2ID"],
   "name": "CombinedRule"
 }
 ```
@@ -283,13 +286,6 @@ const rule2 = "((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR 
 - **Batch Evaluation**: Process multiple records efficiently
 - **Custom Functions**: Support for user-defined evaluation functions
 - **Rule Export/Import**: Share rules across systems
-
-## 🔒 Security
-
-- Input validation for all API endpoints
-- Sanitization of rule expressions
-- Role-based access control
-- Audit logging for rule modifications
 
 ## 🧪 Testing
 
