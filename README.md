@@ -290,7 +290,7 @@ const rule2 = "((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR 
 
 ## 🧪 Testing with Postman
 
-You can find the Postman documentation for the RuleCraft API [here](https://documenter.getpostman.com/view/16476251/2sAY4rDPzX).
+You can find the Postman documentation for the RuleCraft API [https://documenter.getpostman.com/view/16476251/2sAY4rDPzX](https://documenter.getpostman.com/view/16476251/2sAY4rDPzX).
 
 ## Screenshots
 
@@ -329,7 +329,8 @@ You can find the Postman documentation for the RuleCraft API [here](https://docu
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE]([LICENSE](https://github.com/Satyamkumarnavneet/RuleCraft?tab=Apache-2.0-1-ov-file)) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Satyamkumarnavneet/RuleCraft?tab=Apache-2.0-1-ov-file) file for details.
+
 
 ## 📞 Support
 
