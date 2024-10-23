@@ -12,7 +12,7 @@ RuleCraft is a flexible rule engine designed to evaluate user eligibility based 
 - [API Endpoints](#-api-endpoints)
 - [Data Structures](#-data-structures)
 - [Testing with Postman](#-Testing-with-Postman)
-- [Screenshots](#-Screenshots)
+- [Screenshots](#Screenshots)
 - [Performance](#-performance)
 - [Contributing](#-contributing)
 - [License](#-license)
