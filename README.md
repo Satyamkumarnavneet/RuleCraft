@@ -1,13 +1,25 @@
-<<<<<<< HEAD
-# RuleCraft
-RuleXpress is a flexible rule engine that utilizes Abstract Syntax Trees (AST) to evaluate user eligibility based on attributes like age, department, and income. Its 3-tier architecture supports easy creation and modification of rules through a simple UI, API, and backend for efficient decision-making.
-
-=======
 # RuleCraft: Advanced Rule Engine with AST
 
-A sophisticated rule engine that leverages Abstract Syntax Trees (AST) for dynamic rule evaluation and management. Built with a modern 3-tier architecture, RuleCraft enables efficient creation, combination, and evaluation of complex business rules.
+A flexible rule engine that utilizes Abstract Syntax Trees (AST) to evaluate user eligibility based on attributes like age, department, and income. Built with a modern 3-tier architecture, RuleCraft enables efficient creation, combination, and evaluation of complex business rules.
 
 ![RuleCraft Dashboard](https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop&q=60)
+
+## Table of Contents
+
+- [Key Features](#-key-features)
+- [Architecture](#-architecture)
+- [Technologies Used](#-technologies-used)
+- [Implementation Details](#-implementation-details)
+- [Getting Started](#-getting-started)
+- [API Endpoints](#-api-endpoints)
+- [Data Structures](#-data-structures)
+- [Advanced Features](#-advanced-features)
+- [Security](#-security)
+- [Testing](#-testing)
+- [Performance](#-performance)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Support](#-support)
 
 ## 🌟 Key Features
 
@@ -18,32 +30,50 @@ A sophisticated rule engine that leverages Abstract Syntax Trees (AST) for dynam
 - **Attribute Catalog**: Pre-defined set of valid attributes for rule creation
 - **User-Friendly Interface**: Modern, responsive design for easy rule management
 
+## 🚀 Technologies Used
+
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Testing**: Vitest, Postman
+- **Documentation**: OpenAPI/Swagger
+
 ## 🏗 Architecture
 
 RuleCraft follows a robust 3-tier architecture:
 
 ```
-├── Frontend (React + TypeScript)
-│   ├── components/
+RuleCraft/
+├── server/                  # Backend code
+│   ├── models/             # Database models
+│   │   └── Rule.js
+│   ├── routes/             # API routes
+│   │   └── rules.js
+│   ├── controllers/        # Request handling logic
+│   ├── utils/             # Utility functions
+│   │   └── ruleEngine.js
+│   ├── config/            # Configuration files
+│   └── index.js           # Entry point
+│
+├── src/                    # Frontend code
+│   ├── components/        # React components
 │   │   ├── Dashboard.tsx
 │   │   ├── Navbar.tsx
 │   │   ├── RuleList.tsx
 │   │   ├── RuleCreator.tsx
 │   │   ├── RuleEvaluator.tsx
 │   │   └── RuleCombiner.tsx
-│   └── App.tsx
+│   ├── pages/            # Page components
+│   ├── utils/            # Frontend utilities
+│   ├── App.tsx           # Main application
+│   └── index.tsx         # Entry point
 │
-├── Backend (Express.js)
-│   ├── routes/
-│   │   └── rules.js
-│   ├── models/
-│   │   └── Rule.js
-│   └── utils/
-│       └── ruleEngine.js
-│
-└── Database (MongoDB)
-    └── Collections
-        └── rules
+├── .env                   # Environment variables
+├── .gitignore            # Git ignore rules
+├── package.json          # Dependencies
+├── tsconfig.json         # TypeScript config
+├── vite.config.ts        # Vite configuration
+└── README.md             # Documentation
 ```
 
 ## 💻 Implementation Details
@@ -230,10 +260,10 @@ interface RuleNode {
 
 ### Sample Rules
 ```javascript
-// Rule 1
+// Rule 1: Sales and Marketing Rule
 const rule1 = "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)";
 
-// Rule 2
+// Rule 2: Marketing Experience Rule
 const rule2 = "((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR experience > 5)";
 ```
 
