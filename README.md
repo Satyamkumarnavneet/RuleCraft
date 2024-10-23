@@ -39,6 +39,26 @@ RuleCraft is a flexible rule engine designed to evaluate user eligibility based 
 
 RuleCraft follows a robust 3-tier architecture:
 
+
+```
+├── Frontend (React + TypeScript)
+│   ├── Rule Builder UI
+│   ├── Rule Visualization
+│   └── Results Dashboard
+│
+├── API Layer (Express.js)
+│   ├── Rule Management
+│   ├── Evaluation Engine
+│   └── Combination Logic
+│
+└── Data Layer (MongoDB)
+    ├── Rule Storage
+    ├── User Data
+    └── Evaluation History
+```
+
+Repository Structure
+
 ```
 RuleCraft/
 ├── server/                  # Backend code
