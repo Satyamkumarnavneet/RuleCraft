@@ -33,8 +33,7 @@ RuleCraft is a flexible rule engine designed to evaluate user eligibility based 
 - **Frontend**: React, TypeScript, Tailwind CSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
-- **Testing**: Vitest, Postman
-- **Documentation**: OpenAPI/Swagger
+- **Testing**: Postman
 
 ## 🏗 Architecture
 
@@ -66,7 +65,6 @@ RuleCraft/
 │   ├── App.tsx           # Main application
 │   └── index.tsx         # Entry point
 │
-├── .env                   # Environment variables
 ├── .gitignore            # Git ignore rules
 ├── package.json          # Dependencies
 ├── tsconfig.json         # TypeScript config
@@ -302,12 +300,10 @@ npm run test:coverage
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE]([LICENSE](https://github.com/Satyamkumarnavneet/RuleCraft?tab=Apache-2.0-1-ov-file)) file for details.
 
 ## 📞 Support
 
-For support, email support@rulecraft.com or join our [Discord community](https://discord.gg/rulecraft).
+For support, email `navneetsatyamkumar@gmail.com`.
 
 ---
-
-Built with ❤️ by the RuleCraft Team
