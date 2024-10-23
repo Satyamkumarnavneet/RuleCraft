@@ -11,7 +11,7 @@ RuleCraft is a flexible rule engine designed to evaluate user eligibility based 
 - [Getting Started](#-getting-started)
 - [API Endpoints](#-api-endpoints)
 - [Data Structures](#-data-structures)
-- [Testing](#-testing)
+- [Testing with Postman](#-Testing-with-Postman)
 - [Performance](#-performance)
 - [Contributing](#-contributing)
 - [License](#-license)
@@ -287,17 +287,10 @@ const rule2 = "((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR 
 - **Custom Functions**: Support for user-defined evaluation functions
 - **Rule Export/Import**: Share rules across systems
 
-## 🧪 Testing
+## 🧪 Testing with Postman
 
-Run the test suite:
-```bash
-npm run test
-```
+You can find the Postman documentation for the RuleCraft API [here](https://documenter.getpostman.com/view/16476251/2sAY4rDPzX).
 
-Coverage report:
-```bash
-npm run test:coverage
-```
 
 ## 📈 Performance
 
