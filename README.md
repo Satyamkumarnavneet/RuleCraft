@@ -294,20 +294,22 @@ You can find the Postman documentation for the RuleCraft API [here](https://docu
 
 ## Screenshots
 
-### 1. Home 
-![Get All Rules](path/to/get-all-rules-screenshot.png)
+## 1. Home 
+<img width="1470" alt="Combine Rules" src="https://github.com/user-attachments/assets/a15bcb4a-8890-44d0-9f72-4246e6504e0c">
 
-### 2. Get All Rules
-![Get All Rules](path/to/get-all-rules-screenshot.png)
 
-### 3. Create a New Rule
-![Create New Rule](path/to/create-new-rule-screenshot.png)
+## 2. Get All Rules
+<img width="1470" alt="Evaluate Rule" src="https://github.com/user-attachments/assets/e30b2bcb-c720-46d7-883c-4152c09742e2">
 
-### 4. Evaluate a Rule
-![Evaluate Rule](path/to/evaluate-rule-screenshot.png)
+## 3. Create a New Rule
+<img width="1470" alt="Create New Rule" src="https://github.com/user-attachments/assets/2dfcafd5-7035-4215-9c32-71fc3c7ec70c">
 
-### 5. Combine Rules
-![Combine Rules](path/to/combine-rules-screenshot.png)
+## 4. Evaluate a Rule
+<img width="1470" alt="Get All Rules" src="https://github.com/user-attachments/assets/60f8d923-2aac-4d5a-a949-009907e65c82">
+
+## 5. Combine Rules
+<img width="1470" alt="Home" src="https://github.com/user-attachments/assets/65454543-b536-406e-9790-ad4dec3dd942">
+
 
 ## 📈 Performance
 
