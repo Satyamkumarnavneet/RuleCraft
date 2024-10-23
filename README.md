@@ -291,6 +291,22 @@ const rule2 = "((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR 
 
 You can find the Postman documentation for the RuleCraft API [here](https://documenter.getpostman.com/view/16476251/2sAY4rDPzX).
 
+## Screenshots
+
+### 1. Home 
+![Get All Rules](path/to/get-all-rules-screenshot.png)
+
+### 2. Get All Rules
+![Get All Rules](path/to/get-all-rules-screenshot.png)
+
+### 3. Create a New Rule
+![Create New Rule](path/to/create-new-rule-screenshot.png)
+
+### 4. Evaluate a Rule
+![Evaluate Rule](path/to/evaluate-rule-screenshot.png)
+
+### 5. Combine Rules
+![Combine Rules](path/to/combine-rules-screenshot.png)
 
 ## 📈 Performance
 
@@ -298,6 +314,7 @@ You can find the Postman documentation for the RuleCraft API [here](https://docu
 - Caching for frequently used rules
 - Batch processing capabilities
 - Response time < 100ms for standard rules
+
 
 ## 🤝 Contributing
 
