@@ -218,7 +218,7 @@ function App() {
    ```bash
    npm run dev
    ```
-5 Open or Click on the link: `http://127.0.0.1:5173/`
+5. Open or click on the link: `http://127.0.0.1:5173/`
    <div align="center"> <img src="https://github.com/user-attachments/assets/888daa00-15d2-4655-a4e3-b0dfab28609d" alt="Screenshot of the application" width="600" /> </div>
 
 
