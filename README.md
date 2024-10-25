@@ -331,7 +331,7 @@ You can find the Postman documentation for the RuleCraft API [https://documenter
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Satyamkumarnavneet/RuleCraft?tab=Apache-2.0-1-ov-file) file for details.
+This project is licensed under the Apache License - see the [LICENSE](https://github.com/Satyamkumarnavneet/RuleCraft?tab=Apache-2.0-1-ov-file) file for details.
 
 
 ## 📞 Support
